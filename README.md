@@ -18,9 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-Once installed use the command `ripped_params:install` to add the ripped_params folder into your lib folder along with an example YAML file
+Once installed, run this command to add the ripped_params folder into your lib directory along with an example YAML file
 
-## YAML file explained
+```
+rails generate ripped_params:install
+```
+
+## Example YAML file explained
 
 ```
 ---
@@ -53,7 +57,7 @@ In each controller you want to add a Ripped Param include the following:
 
 `uses_ripped_params :project_params`
 
-This will look for a file somewhere in the ripped_params directory called "project_params.yml"
+This will look for a file somewhere in the ripped_params directory called "project_params.yml" and give you a method called project_params in that controller.
 
 You can add as many Ripped Params as you need in each controller.
 
