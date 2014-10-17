@@ -1,4 +1,5 @@
 require 'find'
+require 'yaml'
 
 class NoYAMLFileFoundError < Exception; end
 
