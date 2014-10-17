@@ -1,0 +1,31 @@
+---
+  :require: :project
+  :permit:
+  - :name
+  - :service_id
+  - :quote
+  - :document_attributes:
+    - :filepicker_url
+    - :category_id
+  - :start_at_text
+  - :estimated_duration
+  - :status
+  - :roles_attributes:
+    - :id
+    - :name
+    - :actor_short
+  - :tasks_attributes:
+    - :id
+    - :name
+    - :description
+    - :public
+    - :assigned_to_role
+    - :reviewer_role
+    - :due_at_offset
+    - :start_at_offset
+    - :tag_list: []
+    - :dynamic_fields_attributes:
+        - :id
+        - :kind
+        - :attribute
+        - :receiver
