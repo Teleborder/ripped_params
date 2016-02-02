@@ -14,13 +14,14 @@ module RippedParams
       @params.require(params_data[:require]).permit(params_data[:permit])
     end
 
-    private
-      def params_data
-        @params_data ||= begin
-          raise NoYAMLFileFoundError, "Could not find #{params_yaml_file_name} in #{yaml_files_directory} directory" if !params_yaml_file_path
-          YAML.load_file(params_yaml_file_path)
-        end
+    def params_data
+      @params_data ||= begin
+        raise NoYAMLFileFoundError, "Could not find #{params_yaml_file_name} in #{yaml_files_directory} directory" if !params_yaml_file_path
+        YAML.load_file(params_yaml_file_path)
       end
+    end
+
+    private
 
       def params_yaml_file_path
         @params_yaml_file_path ||= Find.find(yaml_files_directory).find do |file_path|
